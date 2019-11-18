@@ -56,8 +56,8 @@ public class Lesson12 {
         boolean b;
         if (b = validationMessage.isEnabled()) {
             String a = validationMessage.getText();
-            System.out.println(b);
-            System.out.println(a);
+            System.out.println("The validation message contains the text: "+b);
+            System.out.println("validation message text: "+a);
         } else {
 
 
