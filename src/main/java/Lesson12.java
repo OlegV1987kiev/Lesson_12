@@ -29,13 +29,13 @@ public class Lesson12 {
         WebElement titleMr = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("id_gender1")));
 
         titleMr.click();
-        WebElement customerFirstName  = driver.findElement(By.id("customer_firstname"));
+        WebElement customerFirstName = driver.findElement(By.id("customer_firstname"));
         customerFirstName.sendKeys("Oleh");
         WebElement customerLastName = driver.findElement(By.id("customer_lastname"));
         customerLastName.sendKeys("Test");
         WebElement Password = driver.findElement(By.id("passwd"));
         Password.sendKeys("123456A");
-        WebElement firstName  = driver.findElement(By.id("firstname"));
+        WebElement firstName = driver.findElement(By.id("firstname"));
         firstName.sendKeys("Oleh");
         WebElement lastName = driver.findElement(By.id("lastname"));
         lastName.sendKeys("Test");
@@ -50,10 +50,19 @@ public class Lesson12 {
         register.click();
 
 //        WebElement dynamicElement = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("dynami cElement_id")));
-        WebElement validationMessage = driver.findElement(By.cssSelector(".alert"));
-        boolean b = validationMessage.isEnabled();
-        String a = validationMessage.getText();
-        System.out.println(b);
-        System.out.println(a);
+        WebElement validationMessage = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".alert")));
+//        boolean b = validationMessage.isEnabled();
+
+        boolean b;
+        if (b = validationMessage.isEnabled()) {
+            String a = validationMessage.getText();
+            System.out.println(b);
+            System.out.println(a);
+        } else {
+
+
+            System.out.println("There are 3 errors");
+        }
     }
+
 }
