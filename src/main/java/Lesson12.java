@@ -61,7 +61,7 @@ public class Lesson12 {
         } else {
 
 
-            System.out.println("There are 3 errors");
+            System.out.println("There are not  errors");
         }
     }
 
